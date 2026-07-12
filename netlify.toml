@@ -1,0 +1,21 @@
+[build]
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm run validate"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "24"
+  PNPM_VERSION = "11.12.0"
+
+[context.production]
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm run validate"
+
+[context.deploy-preview]
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm run validate"
+
+[context.branch-deploy]
+  command = "corepack enable && pnpm install --frozen-lockfile && pnpm run validate"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
