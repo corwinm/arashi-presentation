@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  --ink: #17221b;
+  --forest: #173f2d;
+  --moss: #66a35c;
+  --lime: #c9f36b;
+  --paper: #f6f4ec;
+  --mist: #dfe9df;
+  --coral: #ff7058;
+}
+
+.slidev-layout {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  padding: 2.6rem 3.2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: -0.035em;
+}
+
+.slidev-layout h1 {
+  color: var(--forest);
+  font-size: 2.5rem;
+  line-height: 1.05;
+  margin-bottom: 1.1rem;
+}
+.slidev-layout h2 {
+  color: var(--forest);
+}
+.slidev-layout p,
+.slidev-layout li {
+  font-size: 1.12rem;
+  line-height: 1.48;
+}
+.slidev-layout code {
+  font-family: "JetBrains Mono", monospace;
+}
+.slidev-layout pre {
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgb(23 63 45 / 0.12);
+}
+
+.cover {
+  background: var(--forest) !important;
+  color: white !important;
+}
+.cover h1 {
+  color: white !important;
+  font-size: 4.2rem !important;
+}
+.cover .eyebrow {
+  color: var(--lime);
+}
+
+.eyebrow {
+  color: var(--moss);
+  font:
+    700 0.78rem/1 "Space Grotesk",
+    sans-serif;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero-line {
+  font-size: 1.55rem;
+  max-width: 720px;
+  line-height: 1.35;
+}
+.muted {
+  color: #5f6d63;
+}
+.accent {
+  color: var(--coral);
+}
+.green {
+  color: var(--moss);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.35rem;
+}
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.card {
+  background: white;
+  border: 1px solid #dce4dc;
+  border-radius: 18px;
+  padding: 1.3rem 1.45rem;
+  box-shadow: 0 10px 28px rgb(23 63 45 / 0.07);
+}
+.card.dark {
+  background: var(--forest);
+  color: white;
+  border: 0;
+}
+.card h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.45rem;
+}
+.card p {
+  font-size: 0.96rem;
+  margin: 0;
+}
+.number {
+  color: var(--coral);
+  font:
+    700 2.7rem/1 "Space Grotesk",
+    sans-serif;
+}
+
+.pillar {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.pillar .icon {
+  font-size: 2.7rem;
+}
+.pillar .tag {
+  color: var(--lime);
+  font:
+    600 0.8rem "Space Grotesk",
+    sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.flow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.3rem;
+}
+.node {
+  flex: 1;
+  background: white;
+  border: 2px solid var(--moss);
+  border-radius: 14px;
+  padding: 0.9rem;
+  text-align: center;
+}
+.arrow {
+  color: var(--coral);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.repo-map {
+  position: relative;
+  min-height: 330px;
+}
+.repo {
+  position: absolute;
+  padding: 0.75rem 1rem;
+  border-radius: 13px;
+  background: white;
+  border: 2px solid var(--moss);
+  font-weight: 600;
+  text-align: center;
+}
+.repo.meta {
+  left: 36%;
+  top: 3%;
+  width: 28%;
+  background: var(--forest);
+  color: white;
+  border-color: var(--forest);
+}
+.repo.r1 {
+  left: 4%;
+  top: 48%;
+  width: 24%;
+}
+.repo.r2 {
+  left: 38%;
+  top: 48%;
+  width: 24%;
+}
+.repo.r3 {
+  right: 4%;
+  top: 48%;
+  width: 24%;
+}
+.connector {
+  position: absolute;
+  height: 3px;
+  background: var(--moss);
+  transform-origin: left center;
+}
+
+.callout {
+  background: var(--mist);
+  border-left: 7px solid var(--coral);
+  border-radius: 0 16px 16px 0;
+  padding: 1rem 1.3rem;
+}
+.big {
+  font:
+    700 3.4rem/1 "Space Grotesk",
+    sans-serif;
+  color: var(--forest);
+}
+.small {
+  font-size: 0.86rem !important;
+}
+.footer-link {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 3.2rem;
+  color: #718077;
+  font-size: 0.72rem;
+}
+
+.end {
+  background: var(--forest) !important;
+  color: white !important;
+}
+.end h1 {
+  color: white !important;
+  font-size: 3.6rem !important;
+}
+.end a {
+  color: var(--lime);
+}
+
+.end-panel {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.2rem;
+  background: var(--forest);
+  color: white;
+}
+.end-panel h1 {
+  color: white;
+  font-size: 3.6rem;
+}
+.end-panel a {
+  color: var(--lime);
+}
