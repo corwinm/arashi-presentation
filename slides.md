@@ -13,13 +13,28 @@ fonts:
   mono: JetBrains Mono
 ---
 
+<div class="brand-lockup"><img :src="'/arashi-logo.svg'" alt="" /><span>ARASHI / PRESENTATION</span></div>
+
+<div class="cover-grid">
+<div class="cover-copy">
 <div class="eyebrow">Git worktrees, coordinated</div>
-
-# Arashi
-
-<div class="hero-line">Parallel work. Distributed codebases.<br><span class="accent">One coherent workflow.</span></div>
-
-<div class="footer-link">github.com/corwinm/arashi · arashi.haphazard.dev</div>
+<h1>Arashi</h1>
+<div class="hero-line">Parallel work across distributed codebases.<br /><span class="accent">One coherent workflow.</span></div>
+<div class="cover-links"><span>arashi.haphazard.dev</span><span>github.com/corwinm/arashi</span></div>
+</div>
+<div class="hero-terminal" aria-label="Arashi coordinated worktree example">
+<div class="terminal-chrome"><i></i><i></i><i></i><span>workspace / feat-search</span></div>
+<div class="terminal-body">
+<div class="tree-line">workspace</div>
+<div class="tree-line">├── <b>repos</b></div>
+<div class="tree-line">│   ├── api <em>→ feat/search</em></div>
+<div class="tree-line">│   ├── web <em>→ feat/search</em></div>
+<div class="tree-line">│   └── docs <em>→ feat/search</em></div>
+<div class="tree-line">└── <b>.arashi/worktrees</b></div>
+<div class="terminal-prompt"><span>$</span> arashi status</div>
+</div>
+</div>
+</div>
 
 <!--
 Open with the outcome, not the command list. Arashi addresses two recurring problems: isolated parallel work and coordination across repositories. We will examine each separately, then combine them.
@@ -33,7 +48,7 @@ Open with the outcome, not the command list. Arashi addresses two recurring prob
 
 <div class="grid-2">
   <div class="card dark pillar">
-    <div class="icon">⑂</div>
+    <div class="icon">01 / WORKTREES</div>
     <div>
       <div class="tag">Problem one</div>
       <h3>Work needs to happen in parallel</h3>
@@ -41,7 +56,7 @@ Open with the outcome, not the command list. Arashi addresses two recurring prob
     </div>
   </div>
   <div class="card dark pillar">
-    <div class="icon">⌘</div>
+    <div class="icon">02 / META-REPO</div>
     <div>
       <div class="tag">Problem two</div>
       <h3>The codebase is distributed</h3>
@@ -382,7 +397,8 @@ Give two starts, matching the two pillars. Invite the audience to choose their c
 ---
 
 <div class="end-panel">
-<div class="eyebrow">Arashi</div>
+<div class="brand-lockup"><img :src="'/arashi-logo.svg'" alt="" /><span>ARASHI</span></div>
+<div class="eyebrow">Choose your path</div>
 
 # Work in parallel.<br>Coordinate what is distributed.
 
