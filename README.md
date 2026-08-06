@@ -9,9 +9,10 @@ The deck shows each solution independently and then demonstrates how they compos
 
 ## Local development
 
-Requires Node.js 24 and the pnpm version pinned in `package.json`.
+Development uses Node.js 24.18.0 (pinned in `.node-version`) and pnpm 11.20.0 (pinned in `package.json`).
 
 ```sh
+npm install --global corepack@0.35.0
 corepack enable
 pnpm install --frozen-lockfile
 pnpm dev
