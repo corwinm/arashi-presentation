@@ -14,7 +14,8 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint:markdown": "markdownlint-cli2 README.md",
-    "validate": "pnpm run format:check && pnpm run lint:markdown && pnpm run build"
+    "test:command-policy": "node scripts/check-documented-command-policy.mjs",
+    "validate": "pnpm run test:command-policy && pnpm run format:check && pnpm run lint:markdown && pnpm run build"
   },
   "dependencies": {
     "@slidev/cli": "52.17.0",
