@@ -31,7 +31,7 @@ fonts:
 <div class="tree-line">│   ├── web <em>→ feat/search</em></div>
 <div class="tree-line">│   └── docs <em>→ feat/search</em></div>
 <div class="tree-line">└── <b>.arashi/worktrees</b></div>
-<div class="terminal-prompt"><span>$</span> arashi status</div>
+<div class="terminal-prompt"><span>$</span> aw status</div>
 </div>
 </div>
 </div>
@@ -108,10 +108,10 @@ A worktree is not another full clone. It gives a branch its own working director
 <div class="lifecycle-rail"><div><span>01</span><b>create</b><small>make workspace</small></div><i></i><div><span>02</span><b>switch</b><small>enter context</small></div><i></i><div><span>03</span><b>status</b><small>understand state</small></div><i></i><div><span>04</span><b>remove</b><small>cleanly retire</small></div></div>
 
 ```sh
-arashi create feat/search
-arashi switch feat/search
-arashi status
-arashi remove feat/search
+aw create feat/search
+aw switch feat/search
+aw status
+aw remove feat/search
 ```
 
 <!--
@@ -199,7 +199,7 @@ The meta-repository is a coordination surface and workspace manifest. It does no
 # Coordinate without pretending it's a monorepo
 
 <div class="command-surface">
-<div class="command-terminal"><div class="terminal-chrome"><i></i><i></i><i></i><span>meta-repository</span></div><div class="command-lines"><span><b>$</b> arashi setup</span><span><b>$</b> arashi status</span><span><b>$</b> arashi pull</span><span><b>$</b> arashi exec -- git status --short</span></div></div>
+<div class="command-terminal"><div class="terminal-chrome"><i></i><i></i><i></i><span>meta-repository</span></div><div class="command-lines"><span><b>$</b> aw setup</span><span><b>$</b> aw status</span><span><b>$</b> aw pull</span><span><b>$</b> aw exec -- git status --short</span></div></div>
 <div class="grouped-output"><div><b>service-api</b><span>✓ clean · main</span></div><div><b>web-app</b><span>↑ 2 commits · feat/search</span></div><div><b>docs</b><span>✓ clean · feat/search</span></div></div>
 </div>
 <div class="statement"><strong>One command surface.</strong><span>Per-repository commits, pull requests, and releases remain independent.</span></div>
@@ -232,7 +232,7 @@ This is where the two pillars compose. One named feature workspace contains alig
 # Create the feature environment once
 
 <div class="create-scene">
-<div class="create-command"><span>$</span><b>arashi create feat/search</b></div>
+<div class="create-command"><span>$</span><b>aw create feat/search</b></div>
 <div class="create-arrow">↓</div>
 <div class="created-workspace"><div class="meta-cell"><span>META</span><b>planning + status</b></div><div><span>API</span><b>commit + PR</b></div><div><span>WEB</span><b>commit + PR</b></div><div><span>DOCS</span><b>commit + PR</b></div></div>
 </div>
@@ -328,8 +328,8 @@ Keep roadmap language directional rather than promising uncommitted features. Po
 # Start with your real constraint
 
 <div class="start-paths">
-<div><span>IF THE CONSTRAINT IS</span><h3>Parallel work</h3><p>Create one isolated worktree for the next branch or agent.</p><div class="mini-terminal"><b>$</b> arashi create feat/next</div><small>START WITH A</small></div>
-<div><span>IF THE CONSTRAINT IS</span><h3>Distributed code</h3><p>Describe the repositories that already make up your product.</p><div class="mini-terminal"><b>$</b> arashi init</div><small>START WITH B</small></div>
+<div><span>IF THE CONSTRAINT IS</span><h3>Parallel work</h3><p>Create one isolated worktree for the next branch or agent.</p><div class="mini-terminal"><b>$</b> aw create feat/next</div><small>START WITH A</small></div>
+<div><span>IF THE CONSTRAINT IS</span><h3>Distributed code</h3><p>Describe the repositories that already make up your product.</p><div class="mini-terminal"><b>$</b> aw init</div><small>START WITH B</small></div>
 </div>
 
 <div class="footer-link">Docs: arashi.haphazard.dev · Source: github.com/corwinm/arashi</div>
