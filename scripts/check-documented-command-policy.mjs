@@ -33,11 +33,18 @@ const legacyInvocation = new RegExp(
 const compatibilityNote =
   "`arashi` executable remains supported for existing scripts and workflows";
 
+function maskPackageRunnerSpecifiers(line) {
+  return line.replace(
+    /\b(npx|pnpm\s+dlx|npm\s+exec\s+--)(\s+)arashi(?=\s)/g,
+    (_, runner, spacing) => `${runner}${spacing}${" ".repeat("arashi".length)}`,
+  );
+}
+
 export function findPreferredArashiInvocations(content, source) {
   return content.split(/\r?\n/).flatMap((line, index) => {
     if (line.includes(compatibilityNote)) return [];
     legacyInvocation.lastIndex = 0;
-    return legacyInvocation.test(line)
+    return legacyInvocation.test(maskPackageRunnerSpecifiers(line))
       ? [
           `${source}:${index + 1}: preferred examples must use aw: ${line.trim()}`,
         ]
@@ -46,15 +53,18 @@ export function findPreferredArashiInvocations(content, source) {
 }
 
 const negative = findPreferredArashiInvocations(
-  "$ arashi status\n`arashi create topic`\ncommand arashi completion zsh\narashi -h",
+  "$ arashi status\n`arashi create topic`\ncommand arashi completion zsh\nnpm exec --package=arashi -- arashi status\narashi -h",
   "negative.md",
 );
-assert.equal(negative.length, 4);
+assert.equal(negative.length, 5);
 assert.deepEqual(
   findPreferredArashiInvocations(
     [
       "Arashi uses .arashi/config.json. npm install -g arashi. https://github.com/corwinm/arashi",
       "The `arashi` executable remains supported for existing scripts and workflows; `arashi status` remains valid there.",
+      "Try npx arashi status.",
+      "Try pnpm dlx arashi status.",
+      "Try npm exec -- arashi status.",
       "Historical examples used the arashi spelling.",
       "Run `aw status`.",
     ].join("\n"),
