@@ -9,7 +9,7 @@ The deck shows each solution independently and then demonstrates how they compos
 
 ## Local development
 
-Development uses Node.js 24.18.0 (pinned in `.node-version`) and pnpm 11.20.0 (pinned in `package.json`).
+Development uses Node.js 24.18.0 (pinned in `.node-version`) and pnpm 11.22.0 (pinned in `package.json`).
 
 ```sh
 npm install --global corepack@0.35.0
