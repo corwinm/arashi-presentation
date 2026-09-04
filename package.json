@@ -18,12 +18,12 @@
     "validate": "pnpm run test:command-policy && pnpm run format:check && pnpm run lint:markdown && pnpm run build"
   },
   "dependencies": {
-    "@slidev/cli": "52.17.0",
+    "@slidev/cli": "52.19.1",
     "@slidev/theme-default": "latest",
-    "vue": "3.5.39"
+    "vue": "3.5.42"
   },
   "devDependencies": {
-    "markdownlint-cli2": "0.23.0",
+    "markdownlint-cli2": "0.23.2",
     "playwright-chromium": "latest",
     "prettier": "3.9.5"
   }
