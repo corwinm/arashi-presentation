@@ -1,2 +1,15 @@
 allowBuilds:
   playwright-chromium: true
+minimumReleaseAgeExclude:
+  - browserslist@4.28.9
+  - hono@4.13.7
+overrides:
+  "@babel/helper-compilation-targets>browserslist": 4.28.9
+  "core-js-compat>browserslist": 4.28.9
+  "@hono/node-server>hono": 4.13.7
+  "@modelcontextprotocol/node>hono": 4.13.7
+  "ajv>fast-uri": 3.1.6
+  "minimatch@5.1.9>brace-expansion": 2.1.4
+  "minimatch@10.2.5>brace-expansion": 5.0.9
+  "monaco-editor>dompurify": 3.4.14
+  "pptxgenjs>image-size": "-"
