@@ -12,6 +12,7 @@ overrides:
   ajv>fast-uri: 3.1.6
   minimatch@5.1.9>brace-expansion: 2.1.4
   minimatch@10.2.5>brace-expansion: 5.0.9
+  markdownlint-cli2>smol-toml: 1.8.0
   monaco-editor>dompurify: 3.4.14
   pptxgenjs>image-size: "-"
 
@@ -6400,10 +6401,10 @@ packages:
       }
     engines: { node: ">=20.0.0" }
 
-  smol-toml@1.7.0:
+  smol-toml@1.8.0:
     resolution:
       {
-        integrity: sha512-aqVvWoyO21L23mb+drl4RmMXbf6N7FdHjAhTRA9ZBL7apWBgfWC16KjrASI+1p9GAroljyMHj6fK67i0UiTNvQ==,
+        integrity: sha512-kCZr2V3ch9i00x8zXRhjUNVcjG9ijES5dDudkXvUVCT5QlJNQWElSJdZqyPemffHoLNUYwOcou0Fy+ojN0uHSQ==,
       }
     engines: { node: ">= 18" }
 
@@ -11234,7 +11235,7 @@ snapshots:
       markdownlint: 0.41.1
       markdownlint-cli2-formatter-default: 0.0.6(markdownlint-cli2@0.23.2)
       micromatch: 4.0.8
-      smol-toml: 1.7.0
+      smol-toml: 1.8.0
     transitivePeerDependencies:
       - supports-color
 
@@ -12191,7 +12192,7 @@ snapshots:
   smob@1.6.2:
     optional: true
 
-  smol-toml@1.7.0: {}
+  smol-toml@1.8.0: {}
 
   source-map-js@1.2.1: {}
 
